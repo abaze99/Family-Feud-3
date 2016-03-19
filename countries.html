@@ -1,0 +1,25 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script type="text/javascript">
+   jQuery(document).ready(function($) {
+      $.ajax({
+         url: "http://api.aerisapi.com/countries/search?query=pop:0&sort=pop:-1&limit=6&client_id=zCqKvajWEA7fuUnM810gh&client_secret=ArhTjfFVIfdZyZqWlJZ4j4L3NwtKkp9J3VavqTIr",
+         dataType: "jsonp",
+         success: function(json) {
+            if (json.success == true) {
+               var ob = json.response;     
+               console.log(ob[0]);   
+               var countryArr = [];
+
+               for(i=0; i < ob.length; i++) {
+                  countryArr.push(ob[i].place.name);
+                  $('#js').append(ob[i].place.name);
+               }  
+            }
+            else {
+               alert('An error occurred: ' + json.error.description);
+            }
+         }
+      });
+   });
+</script>
+<div id="js"></div>

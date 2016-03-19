@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<title>Family Feud</title>
+		<link rel="stylesheet" href ="css/style.css?x=2">
+	</head>
+	<body>
+
+	<div class="incorrect">
+			<div id="incorrect-one" class="incorrect-response"><span>X</span></div>
+			<div id="incorrect-two" class="incorrect-response"><span>X</span><span>X</span></div>
+			<div id="incorrect-three" class="incorrect-response"><span>X</span><span>X</span><span>X</span></div>
+	</div>
+
+		<section class="game">
+			<div class="score">
+				<h1>0</h1>
+			</div>
+
+			<div class="survey">
+				<div class="col">
+					<div class="option" id="option-one">
+						<div class="number" id="one"><span>1</span></div>
+					</div>
+					<div class="option" id="option-two">
+						<div class="number" id="two"><span>2</span></div>
+					</div>
+					<div class="option" id="option-three">
+						<div class="number" id="three"><span>3</span></div>
+					</div>
+					<div class="option" id="option-four">
+						<div class="number" id="four"><span>4</span></div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="option" id="option-five">
+						<div class="number" id="five"><span>5</span></div>
+					</div>
+					<div class="option" id="option-six">
+						<div class="number" id="six"><span>6</span></div>
+					</div>		
+					<div class="option">
+					</div>	
+					<div class="option">
+					</div>		
+				</div>	
+			</div>
+				<form class="question-response">
+					<div class="question"></div>
+					<input type="text" class="user-input">
+						<div class="btn-container next-button">
+							<div class="next"><span>NEXT</span></div>
+						</div>
+				</form>
+		</section>
+		<!-- Final Round Style -->
+
+		<section class="final">
+			<div class="final-container">
+				<form class="final-survey">
+					<div class="row">
+
+					<input type="text" id="question-one" class="final-question" data-question-number ="0"><div class="q-score"></div>
+					</div>
+					<div class="row">
+						<input type="text" id="question-two" class="final-question" data-question-number="1"><div class="q-score"></div>
+					</div>
+					<div class="row">
+						<input type="text" id="question-three" class="final-question" data-question-number="2"><div class="q-score"></div>
+					</div>
+					<div class="row">
+						<input type="text" id="question-four" class="final-question" data-question-number="3"><div class="q-score"></div>
+					</div>
+					<div class="row">
+						<input type="text" id="question-five" class="final-question" data-question-number="4"><div class="q-score" ></div>
+					</div>
+					
+					<div class="final-score"><span>Total: <span id="overall-score">0</span></span></div>
+				</div>
+			</div>
+		</section>	
+
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="js/main.js?x=2"></script>	
+	</body>
+</html>
