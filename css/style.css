@@ -31,9 +31,9 @@ body {
 	margin-top:1em;
 	border:15px ridge #28201F;
 	height:16%;
-	width:20%;
+	width:50%;
 	background-color:#257CC6;
-		display:flex;
+	display:flex;
 	justify-content: center;
 	align-items:center;
 
@@ -44,7 +44,7 @@ body {
 .score h1 {
 	margin:0 auto;
 	text-align:center;
-	font-size:7em;
+	font-size:3em;
 	font-weight:bolder;
 	color:white;
 }
@@ -82,7 +82,7 @@ body {
 }
 
 .number {
-	width:25%;
+	width:85%;
 	height:65%;
 	border-radius:50%;
 	border:1px solid white;
@@ -93,27 +93,24 @@ body {
 }
 
 .number span {
-	font-size:3.8em;
+	font-size:2em;
 	font-weight:bolder;
 	color:white;
 }
 
 .question-response {
-	width:60%;
 	height:16.5%;
 	margin:0 auto;
 	text-align:center;
 	border:25px ridge #28201F;
 	background-color:#0055AE;
-
-		/*display:none;*/
 }
 
 .question {
 	height:65%;
-	width:90%;
+	width:100%;
 	margin:0 auto;
-	font-size:1.35em;
+	font-size:1em;
 	display:flex;
 	justify-content: center;
 	align-items:center;
@@ -121,7 +118,6 @@ body {
 
 .question span {
 	border:5px white ridge;
-	padding:0.25em 1.5em;
 	background-color:#257CC6;
 	color:white;
 }
@@ -132,9 +128,8 @@ body {
 }
 
 .user-input {
-	width:50%;
-	padding:0.2em;
-	font-size:1.2em;
+	width:80%;
+	font-size:1em;
 }
 
 /*-- Added class for correct answer --*/
@@ -149,7 +144,7 @@ body {
 
 .correct span {
 	color:white;
-	font-size:2em;
+	font-size:1em;
 }
 
 .question-points {
@@ -167,7 +162,7 @@ body {
 
 .option-score span {
 	color:white;
-	font-size:2em;
+	font-size:1em;
 }
 
 .incorrect {
@@ -287,10 +282,14 @@ body {
 .q-score {
 	height:100%;
 	width:20%;
-	display:inline-block;
 	box-sizing:border-box;
 	background-color:black;
 	color:white;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	font-size:2.2em;
+	font-weight:bold;
 }
 
 .final-score {
@@ -312,4 +311,89 @@ body {
 
 #overall-score {
 	font-size:1.2em;
+}
+
+.show {
+	display:none;
+  	-webkit-transform: rotatex(-180deg);
+}
+
+@media screen and (min-width:36em) {
+	.score {
+		width:33%;
+	}
+
+	.score h1 {
+		font-size:4.5em;
+	}
+
+	.number {
+		width:47%;
+		height:70%;
+	}
+
+	.number span {
+		font-size:3em;
+	}
+
+	.question {
+		font-size:1.1em;
+		width:95%;
+	}
+
+	.question span {
+		padding:0.25em 0.75em;
+	}
+
+	.user-input {
+		width:70%;
+	}
+
+}
+
+@media screen and (min-width:60em) {
+	.score {
+		width:20%;
+		margin-top:0.25em;
+	}
+
+	.score h1 {
+		font-size:5em;
+	}
+	
+	.number {
+		width:35%;
+		height:80%;
+	}
+
+	.number span {
+		font-size:3.5em;
+	}
+
+	.question-response {
+		width:60%;
+	}
+
+	.question {
+		width:90%;
+		font-size:1.35em;
+	}
+
+	.question span {
+		padding:0.25em 1.5em;
+	}
+
+	.user-input {
+		width:50%;
+		padding:0.2em;
+		font-size:1.2em;
+	}
+
+	.option-score span {
+		font-size:2em;
+	}
+
+	.correct span {
+		font-size:2em;
+	}
 }
