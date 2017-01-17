@@ -1,0 +1,187 @@
+var currentQuestion;
+var score;
+var incorrect;
+var correct;
+
+var question = [{
+	text:"What are the five countries with the largest population?",
+		options:[
+		{ optionText:"China", optionValue: 30 },
+		{ optionText:"India", optionValue: 22 },
+		{ optionText:"United States", optionValue: 18 },
+		{ optionText:"Indonesia", optionValue: 15 },
+		{ optionText:"Brazil", optionValue: 10 },
+		{ optionText:"Russia", optionValue: 5 }
+	]},
+
+	{ text:"What is...",
+		options:[
+		{ optionText:"Africa", optionValue: 30 },
+		{ optionText:"India", optionValue:25 },
+		{ optionText:"United States", optionValue: 20 },
+		{ optionText:"Indonesia", optionValue: 15 },
+		{ optionText:"Brazil", optionValue: 10 }
+	]
+}];
+
+$(document).ready(function (){
+	newGame();
+	askQuestion();
+
+	$('.question-response').submit(function (event) {
+		var userInput = $('.user-input').val().toLowerCase();
+		var optionsArr = question[currentQuestion].options;
+		event.preventDefault();
+
+		if ((correct <= 6) && (incorrect <= 3)) {
+
+			if (correct == 5) {
+				match();
+				$('.next').show();
+				$('.question').hide();
+				$('.user-input').hide();
+
+			} else if (incorrect == 2) { 
+				noMatch();
+				$('.next').show();
+				$('.question').hide();
+				$('.user-input').hide();
+
+			} else if (search(userInput, optionsArr) !== -1) {
+				match();
+
+			} else {
+				noMatch();
+
+			}
+			$('.user-input').val('');
+
+		} 
+	});
+
+    $('.next').click(function() {
+    	nextQuestion();
+    });
+
+});
+
+function newGame() {
+	currentQuestion = 0;
+	score = 0;
+}
+
+function askQuestion() {
+	correct = 0;
+	incorrect = 0;
+
+	var text = question[currentQuestion].text;
+	var span = '<span>' + text + '</span>';
+
+	$('.question').html(span);
+	$('.incorrect').hide();
+	$('#incorrect-one').hide();
+	$('#incorrect-two').hide();
+	$('#incorrect-three').hide();	
+}
+
+function nextQuestion() {
+	var optionResetOne = $('<div class="number">' + '<span>' + 1 + '</span>' + '</div>');
+	var optionResetTwo = $('<div class="number">' + '<span>' + 2 + '</span>' + '</div>');
+	var optionResetThree = $('<div class="number">' + '<span>' + 3 + '</span>' + '</div>');
+	var optionResetFour = $('<div class="number">' + '<span>' + 4 + '</span>' + '</div>');
+	var optionResetFive = $('<div class="number">' + '<span>' + 5 + '</span>' + '</div>');
+	var optionResetSix = $('<div class="number">' + '<span>' + 6 + '</span>' + '</div>');
+
+	$('#option-one').html(optionResetOne);
+	$('#option-two').html(optionResetTwo);
+	$('#option-three').html(optionResetThree);
+	$('#option-four').html(optionResetFour);
+	$('#option-five').html(optionResetFive);
+	$('#option-six').html(optionResetSix);
+
+	$('.next').hide();
+	$('.question').show();
+	$('.user-input').show();
+	$('.correct').hide();
+	$('.option-score').hide();
+	$('.option').show();
+	$('.number span').show();
+
+	currentQuestion++;
+	askQuestion();
+}
+
+function search(optionsText, optionsArr) {
+	for(i = 0; i < optionsArr.length; i++) {
+		if (optionsText == optionsArr[i].optionText.toLowerCase()) {
+			return i;
+		}
+	} return -1;
+}
+
+function match() {
+	var optionsArr = question[currentQuestion].options;
+	var userInput = $('.user-input').val().toLowerCase();
+	var span = $('<div class="correct">' + '<span>' + userInput + '</span>' + '</div>');
+
+	correct++;
+
+	if (optionsArr[0].optionText.toLowerCase() == userInput ) {
+		$('#option-one').html(span);
+		$('#option-one').append($('<div class="option-score">' + '<span>' + optionsArr[0].optionValue + '</span>' + '</div>'));
+			score = optionsArr[0].optionValue + score;
+			$('.score h1').html(score);
+	} else if (optionsArr[1].optionText.toLowerCase() == userInput ) {
+		$('#option-two').html(span);
+		$('#option-two').append($('<div class="option-score">' + '<span>' + optionsArr[1].optionValue + '</span>' + '</div>'));
+			score = optionsArr[1].optionValue + score;
+			$('.score h1').html(score);
+	} else if (optionsArr[2].optionText.toLowerCase() == userInput ) {
+		$('#option-three').html(span);
+		$('#option-three').append($('<div class="option-score">' + '<span>' + optionsArr[2].optionValue + '</span>' + '</div>'));
+			score = optionsArr[2].optionValue + score;
+			$('.score h1').html(score);
+	} else if (optionsArr[3].optionText.toLowerCase() == userInput ) {
+		$('#option-four').html(span);
+		$('#option-four').append($('<div class="option-score">' + '<span>' + optionsArr[3].optionValue + '</span>' + '</div>'));
+			score = optionsArr[3].optionValue + score;
+			$('.score h1').html(score);
+	} else if (optionsArr[4].optionText.toLowerCase() == userInput ) {
+		$('#option-five').html(span);
+		$('#option-five').append($('<div class="option-score">' + '<span>' + optionsArr[4].optionValue + '</span>' + '</div>'));
+			score = optionsArr[4].optionValue + score;
+			$('.score h1').html(score);
+	} else {
+		$('#option-six').html(span);
+		$('#option-six').append($('<div class="option-score">' + '<span>' + optionsArr[5].optionValue + '</span>' + '</div>'));
+			score = optionsArr[5].optionValue + score;
+			$('.score h1').html(score);
+	}
+}
+
+function noMatch() {
+	incorrect++;
+
+	if (incorrect == 1) {
+		$('.incorrect').fadeIn("3000");
+		$('#incorrect-one').fadeIn("3000");
+		$('.incorrect').fadeOut("3000");
+		$('#incorrect-one').fadeOut("3000");
+	} else if (incorrect == 2) {
+		$('.incorrect').fadeIn("3000");
+		$('#incorrect-two').fadeIn("3000");
+		$('.incorrect').fadeOut("3000");
+		$('#incorrect-two').fadeOut("3000");
+	} else {
+		$('.incorrect').fadeIn("3000");
+		$('#incorrect-three').fadeIn("3000");
+		fadeOut();
+	}	
+}
+
+function fadeOut() {
+	$('#incorrect-three').fadeOut(500).promise().done(function() {
+	    $('.next').show();
+	});
+}
+
