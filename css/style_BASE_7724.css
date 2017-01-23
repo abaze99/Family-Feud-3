@@ -1,0 +1,398 @@
+body {
+	/*background-color:#974098;*/
+	background-image:url(https://sassymamainla.com/wp-content/uploads/2015/06/Celebrity-Family-Feud-Full.jpg);
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+
+.game {
+	height:94.2%;
+	width:75%;
+	border-radius:50%;
+	border:solid 25px #28201F;
+	margin:0 auto;
+    background:
+        -moz-radial-gradient(white 15%, transparent 16%),
+        -moz-radial-gradient(white 15%, transparent 16%),
+        white;
+    background:
+        -webkit-radial-gradient(#FFE804 30%, transparent 16%),
+        -webkit-radial-gradient(#FFE804 30%, transparent 16%),
+        #0055AE;
+    background-position: 0 0, 0 0;
+    
+    -webkit-background-size:80px 80px;
+    -moz-background-size:80px 80px;
+    background-size:38px 38px;
+}
+
+.score {
+	margin:0 auto;
+	margin-top:1em;
+	border:15px ridge #28201F;
+	height:16%;
+	width:50%;
+	background-color:#257CC6;
+	display:flex;
+	justify-content: center;
+	align-items:center;
+
+
+	/*display:none;*/
+}
+
+.score h1 {
+	margin:0 auto;
+	text-align:center;
+	font-size:3em;
+	font-weight:bolder;
+	color:white;
+}
+
+.survey {
+	display:flex;
+	/*flex-direction: column; -- To set for mobile*/
+	width:70%;
+	border:25px ridge #28201F;
+	margin:0 auto;
+	background-color:#515265;
+
+
+	/*display:none;*/
+}
+
+.col {
+	flex-basis:50%;
+	flex-grow:1;
+}
+
+.option {
+	height:11%;
+	border:6px ridge white;
+	background-color:#257CC6;
+	margin:0.3em;
+	cursor:pointer;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.option:hover {
+	background-color:#1D589A;
+}
+
+.number {
+	width:85%;
+	height:65%;
+	border-radius:50%;
+	border:1px solid white;
+	background-color:#2E2E7F;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.number span {
+	font-size:2em;
+	font-weight:bolder;
+	color:white;
+}
+
+.question-response {
+	height:16.5%;
+	margin:0 auto;
+	text-align:center;
+	border:25px ridge #28201F;
+	background-color:#0055AE;
+}
+
+.question {
+	height:65%;
+	width:100%;
+	margin:0 auto;
+	font-size:1em;
+	display:flex;
+	justify-content: center;
+	align-items:center;
+}
+
+.question span {
+	border:5px white ridge;
+	background-color:#257CC6;
+	color:white;
+}
+
+.question-response input {
+	margin:0 auto;
+	text-align:center;
+}
+
+.user-input {
+	width:80%;
+	font-size:1em;
+}
+
+/*-- Added class for correct answer --*/
+.correct {
+	background-color:#1F4690;
+	height:100%;
+	width:80%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.correct span {
+	color:white;
+	font-size:1em;
+}
+
+.question-points {
+	width:15%;
+	height:95%;
+	border:1px solid red;
+}
+
+.option-score {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	width:20%;
+}
+
+.option-score span {
+	color:white;
+	font-size:1em;
+}
+
+.incorrect {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	display:none;
+	justify-content: center;
+	align-items: center;
+}
+
+.hide {
+	display:none;
+}
+
+.incorrect-response {
+	display:none;
+}
+
+.incorrect span {
+	border:5px solid red;
+	width:9em;
+	height:9em;
+}
+
+.incorrect-response span {
+	border:10px solid red;
+	font-size:20em;
+	color:red;
+	margin:0.05em;
+}
+
+.next-btn {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	width:100%;
+	height:100%;
+}
+
+.next {
+    font-size: 2.25em;
+    width: 5em;
+    text-align: center;
+    background-color: #001621;
+    color: white;
+    border-radius: 15px;
+    margin: 0 auto;
+    padding: 0.45em 0 0.45em;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-top: 0.75em;
+}
+
+/*-- Final Round --*/
+.final {
+	height:94.2%;
+	width:75%;
+	border-radius:50%;
+	border:solid 25px #28201F;
+	margin:0 auto;
+    background:
+        -moz-radial-gradient(white 15%, transparent 16%),
+        -moz-radial-gradient(white 15%, transparent 16%),
+        white;
+    background:
+        -webkit-radial-gradient(#FFE804 30%, transparent 16%),
+        -webkit-radial-gradient(#FFE804 30%, transparent 16%),
+        #0055AE;
+    background-position: 0 0, 0 0;
+    
+    -webkit-background-size:80px 80px;
+    -moz-background-size:80px 80px;
+    background-size:38px 38px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.final-container {
+	width:70%;
+	height:70%;
+	background-color:white;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	background-color:#000683;
+}
+
+.final-survey {
+	width:80%;
+	height:80%;
+}
+
+.row {
+	width:100%;
+	height:4.5em;
+	display:flex;
+	margin-bottom:0.4em;
+}
+
+.final-question {
+	width:80%;
+	height:100%;
+	background-color:black;
+	color:white;
+	font-size:1em;
+	margin-right:0.25em;
+	display:inline-block;
+	box-sizing:border-box;
+	border:none;
+	padding-left:0.7em;
+}
+
+.q-score {
+	height:100%;
+	width:20%;
+	box-sizing:border-box;
+	background-color:black;
+	color:white;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	font-size:2.2em;
+	font-weight:bold;
+}
+
+.final-score {
+    width: 30%;
+    height: 15%;
+    float: right;
+    margin-top: 0.5em;
+    background-color: black;
+    display:flex;
+}
+
+.final-score span {
+	color:white;
+	font-size:2em;
+	display:flex;
+	align-items:center;
+	padding-left:0.5em;
+}
+
+#overall-score {
+	font-size:1.2em;
+}
+
+.show {
+	display:none;
+  	-webkit-transform: rotatex(-180deg);
+}
+
+@media screen and (min-width:36em) {
+	.score {
+		width:33%;
+	}
+
+	.score h1 {
+		font-size:4.5em;
+	}
+
+	.number {
+		width:47%;
+		height:70%;
+	}
+
+	.number span {
+		font-size:3em;
+	}
+
+	.question {
+		font-size:1.1em;
+		width:95%;
+	}
+
+	.question span {
+		padding:0.25em 0.75em;
+	}
+
+	.user-input {
+		width:70%;
+	}
+}
+
+@media screen and (min-width:60em) {
+	.score {
+		width:20%;
+		margin-top:0.25em;
+	}
+
+	.score h1 {
+		font-size:5em;
+	}
+	
+	.number {
+		width:35%;
+		height:80%;
+	}
+
+	.number span {
+		font-size:3.5em;
+	}
+
+	.question-response {
+		width:60%;
+	}
+
+	.question {
+		width:90%;
+		font-size:1.35em;
+	}
+
+	.question span {
+		padding:0.25em 1.5em;
+	}
+
+	.user-input {
+		width:50%;
+		padding:0.2em;
+		font-size:1.2em;
+	}
+
+	.option-score span {
+		font-size:2em;
+	}
+
+	.correct span {
+		font-size:2em;
+	}
+}

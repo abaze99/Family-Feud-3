@@ -544,9 +544,14 @@
 		font-size:2em;
 	}
 }*/
-
+/*
 body {
+<<<<<<< ab452dec55fbe84647bc979228a113f6b358314a
+	background-image:url(http://sassymamainla.com/wp-content/uploads/2015/06/Celebrity-Family-Feud-Full.jpg);
+=======
+	/*background-color:#974098;*/
 	background-image:url(../Celebrity-Family-Feud-Full.jpg);
+>>>>>>> Changed background image source
 	background-repeat:no-repeat;
 	background-size: cover;
 }
