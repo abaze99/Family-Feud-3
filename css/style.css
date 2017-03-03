@@ -1,5 +1,6 @@
+
 	body {
-	    /* background-color: #974098; */
+	     background-color: #974098; 
 	    /* background-image: url(http://sassymamainla.com/wp-content/uploads/2015/06/Celebrity-Family-Feud-Full.jpg); */
 	    background-repeat: no-repeat;
 	    background-size: cover;
@@ -183,7 +184,6 @@
 		color:red;
 		margin:0.05em;
 	}
-
 
 @media screen and (min-width:45em) {
 
@@ -466,86 +466,7 @@
 	}
 }
 
-/*@media screen and (min-width:36em) {
-	.score {
-		width:33%;
-	}
-
-	.score h1 {
-		font-size:4.5em;
-	}
-
-	.number {
-		width:47%;
-		height:70%;
-	}
-
-	.number span {
-		font-size:3em;
-	}
-
-	.question {
-		font-size:1.1em;
-		width:95%;
-	}
-
-	.question span {
-		padding:0.25em 0.75em;
-	}
-
-	.user-input {
-		width:70%;
-	}
-}
-
-@media screen and (min-width:60em) {
-	.score {
-		width:20%;
-		margin-top:0.25em;
-	}
-
-	.score h1 {
-		font-size:5em;
-	}
-	
-	.number {
-		width:35%;
-		height:80%;
-	}
-
-	.number span {
-		font-size:3.5em;
-	}
-
-	.question-response {
-		width:60%;
-	}
-
-	.question {
-		width:90%;
-		font-size:1.35em;
-	}
-
-	.question span {
-		padding:0.25em 1.5em;
-	}
-
-	.user-input {
-		width:50%;
-		padding:0.2em;
-		font-size:1.2em;
-	}
-
-	.option-score span {
-		font-size:2em;
-	}
-
-	.correct span {
-		font-size:2em;
-	}
-}*/
-
-body {
+/*body {
 	background-image:url(../Celebrity-Family-Feud-Full.jpg);
 	background-repeat:no-repeat;
 	background-size: cover;
@@ -854,3 +775,4 @@ body {
 	display:none;
   	-webkit-transform: rotatex(-180deg);
 }
+*/
